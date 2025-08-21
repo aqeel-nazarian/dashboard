@@ -982,17 +982,27 @@ body {
 }
 
 /*---------------------------- RESPONSIVE DESIGN ---------------------------------*/
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
     .content {
         grid-template-columns: 2fr 1fr;
-        grid-template-areas: "welcome profile" "project stats" "timeline timeline" "users user";
+        grid-template-areas: 
+        "welcome profile" 
+        "project stats" 
+        "timeline timeline" 
+        "users user";
     }
 }
 
 @media (max-width: 992px) {
     .content {
         grid-template-columns: 1fr;
-        grid-template-areas: "welcome" "profile" "projects" "stats" "timeline" "users";
+        grid-template-areas: 
+        "welcome" 
+        "profile" 
+        "projects" 
+        "stats" 
+        "timeline" 
+        "users";
     }
     .project-grid, .stats-grid, .users-grid {
         grid-template-columns: 1fr;
