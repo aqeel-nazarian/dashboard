@@ -325,7 +325,7 @@ body {
     grid-template-areas: 
     "welcome profile"
     "projects stats"
-    "timeline timelime"
+    "timeline timeline"
     "users users";
 }
 
@@ -825,8 +825,30 @@ body {
     top: 0;
     font-size: 0.8rem;
     color: var(--gray);
+    margin-top: -2px;
 }
 
+.task-bar {
+    position: absolute;
+    height: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.task-bar:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
 
 
