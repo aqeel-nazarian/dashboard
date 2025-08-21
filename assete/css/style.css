@@ -373,7 +373,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* Profile card */
+/*-------------------------------------------------- Profile card -----------------------------------------------*/
 .profile-card {
     grid-area: profile;
     background: var(--card-bg);
@@ -480,7 +480,7 @@ body {
     margin-top: 0.25rem;
 }
 
-/* Cards */
+/*-------------------------------------------------------- Cards ----------------------------------------------*/
 .card {
     background: var(--card-bg);
     border-radius: 12px;
@@ -494,7 +494,7 @@ body {
     box-shadow: var(--hover-shadow);
 }
 
-/* PROJECT SECTION */
+/*------------------------------------------ PROJECT SECTION ---------------------------------------------*/
 .project-section {
     grid-area: projects;
 }
@@ -559,7 +559,7 @@ body {
     font-weight: 600;
 }
 
-/* PROJECT CATEGORY INDICATOR */
+/*------------------------------------------------- PROJECT CATEGORY INDICATOR ------------------------------------------------*/
 .design {
     background: rgba(72, 149, 239, 0.15);
     color: var(--accent);
@@ -612,7 +612,7 @@ body {
 }
 
 
-/* PROJECT PROGREESS INDICATOR */
+/*---------------------------------------- PROJECT PROGREESS INDICATOR ---------------------------------------*/
 .project-1 .progress-fill {
     width: 75%;
     background: linear-gradient(to right, var(--primary), var(--accent));
@@ -665,7 +665,7 @@ body {
     color: var(--text-color);
 }
 
-/* PROJECT PRIORITY INDICATOR */
+/*--------------------------------------- PROJECT PRIORITY INDICATOR ----------------------------------------------*/
 .priority-indicator {
     width: 12px;
     height: 12px;
@@ -850,6 +850,57 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+
+/*---------------------------------- USER SECTION ------------------------------------*/
+.user-section {
+    grid-area: users;
+}
+
+.user-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.user-card {
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.user-avatar-lg {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.user-avatar-lg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-color);
+}
+
+.user-info p {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
 
 
 
