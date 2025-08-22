@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //Update icon and save prefrence
         const themeIcon = this.querySelector('i');
         if (document.body.classList.contains('dark-mode')) {
-            themeIcon.classList.remove(fa - moon);
+            themeIcon.classList.remove('fa-moon');
             themeIcon.classList.add('fa-sun');
             localStorage.setItem('theme', 'dark');
         } else {
@@ -63,5 +63,33 @@ document.addEventListener("DOMContentLoaded", function () {
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
         }
-    })
+    });
+    // Load saved theme prefrence
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        const themeIcon = document.querySelector('.theme-toggle i');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
+
+    // Add hover effect to task bar
+    document.querySelectorAll('.task-bar').forEach(task => {
+        task.addEventListener('mouseenter', function () {
+            this.style.zIndex = '10';
+        });
+        task.addEventListener('mouseleave', function () {
+            this.style.zIndex = '1';
+        });
+    });
+
+    //Animate progress ring
+    document.querySelectorAll('.progress-ring.progress-fill').forEach(ring => {
+        const circumference = 283; // 2*pi*r
+        const progressRing = ring.closest('.progress-ring');
+        const progressText = progressRing.querySelector('.progress-text').textContent;
+        const percentage = parseInt(progressText);
+        const offset = circumference - (percentage * circumference / 100);
+        ring.style.strokeDashoffset = offset;
+    });
 });
